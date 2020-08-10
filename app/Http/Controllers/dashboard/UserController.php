@@ -4,21 +4,18 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-class DashboardController extends Controller
+use App\Models\User;
+class UserController extends Controller
 {
 
-    public function index()
+    public function index(User $users)
     {
-        $active ='Users';
-        return view('home',['active'=>$active]);
+        $active = 'Users';
+        $users = $users->paginate(10);
+        return view('dashboard/user/list',['users'=>$users, 'active'=>$active]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
