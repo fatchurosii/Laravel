@@ -10,6 +10,10 @@ use Validator;
 class UserController extends Controller
 {
 
+
+
+
+
     public function index( Request $request,User $users)
     {
         // Search
