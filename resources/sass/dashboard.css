@@ -47,4 +47,13 @@ table.table tr td {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.form-group label {
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.icon-menu {
+  margin-right: 0.5em;
+}
 /*# sourceMappingURL=dashboard.css.map */

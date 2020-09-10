@@ -3,7 +3,7 @@
 @foreach ($list as $row)
 <a class="nav-link {{ $isActive($row['label']) ? 'active' : ''}}"
     href="{{route($row['route'])}}">
-        {{ $row['label'] }}
+       <i class="{{$row['icon']}}"></i> {{ $row['label'] }}
     </a>
 @endforeach
 </nav>
